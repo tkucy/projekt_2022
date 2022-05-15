@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJBIQZ3RHmqYYyaHz5I7Bc4zAwa-sG_bo&callback=initMap"></script>
+  <link rel="icon" type="image/png" href="fav2.png">
+  <title>Your website title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+</head>
+<body>
+
+  <nav>
+      <img src="logo.png" alt="logo" class="logo">
+
+        <ul>
+          <li><a href="#main">HOME</a></li>
+          <li><a href="#map">MAP</a></li>
+          <li><a href="#photos">PHOTOS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <h1>Hello<br>World</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+      </div>
+
+      <div id="map"></div>
+      <script>
+        function initMap() {
+          let warsaw = {lat: 52.24164793550067, lng: 21.016577470133917};
+          let map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 9, center: warsaw}
+          );
+        }
+      </script>
+
+    <div id="photos">
+      <h1>Latest Photos</h1>
+
+      <div id="grid">
+        <a href="1.jpg"><img src="1.jpg" class="miniature"></a>
+        <a href="2.jpg"><img src="2.jpg" class="miniature"></a>
+        <a href="3.jpg"><img src="3.jpg" class="miniature"></a>
+
+        <a href="4.jpg"><img src="4.jpg" class="miniature"></a>
+        <a href="5.jpg"><img src="5.jpg" class="miniature"></a>
+        <a href="6.jpg"><img src="6.jpg" class="miniature"></a>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script>
+      lightGallery(document.getElementById('grid'), {
+        thumbnail:true,
+        animateThumb: false,
+        showThumbByDefault: false,
+        counter:false
+      }); 
+    </script>
+
+
+    <div id="contact">
+      <div class="split-background">
+        <div class="leftCircle"></div>
+        <div class="rightBottomCircle"></div>
+        <div class="topCircle"></div>
+      </div>
+    <div class="left">
+      <h1>Contact with us</h1>
+      <ul>
+        <li><a href="http://www.facebook.com/" target="_blank"><img src="facebook_blue.png" class="socials"> </a></li>
+        <li><a href="http://www.instagram.com/" target="_blank"> <img src="instagram.png" class="socials"> </a></li>
+        <li><a href="http://www.whatsapp.com/" target="_blank"><img src="whatsapp.png" class="socials"></a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <h1>Send an e-mail:</h1>
+      <form method="POST" action="add.php" class="rightsection">
+         <input type="text" name="imie" placeholder="First Name">
+         <input type="email" name="email" placeholder="E-mail">
+         <textarea name="wiadomosc" placeholder="Your message" cols="30" rows="10"></textarea>
+         <button type="submit">Send</button>
+      </form>
+    </div>
+    </div>
+
+
+  <footer>
+    <p>Tobiasz Kucy 2022</p>
+    <ol>
+      <li><b>PHONE:</b>+48 555 111 999</li>
+      <li><b>E-MAIL:</b>example@example.com</li>
+    </ol>
+  </footer>
+
+</body>
+</html>
